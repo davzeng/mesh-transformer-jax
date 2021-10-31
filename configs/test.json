@@ -1,0 +1,42 @@
+{
+  "layers": 28,
+  "d_model": 4096,
+  "n_heads": 16,
+  "n_vocab": 50400,
+  "norm": "layernorm",
+  "pe": "rotary",
+  "pe_rotary_dims": 64,
+
+  "seq": 2048,
+  "cores_per_replica": 8,
+  "per_replica_batch": 1,
+  "gradient_accumulation_steps": 16,
+
+  "warmup_steps": 2000,
+  "anneal_steps": 200000,
+  "lr": 1.2e-4,
+  "end_lr": 1.2e-5,
+  "weight_decay": 0.1,
+  "total_steps": 220000,
+
+  "tpu_size": 8,
+
+  "bucket": "buddy2point0_testbucket",
+  "model_dir": "test_rotary",
+
+  "train_set": "test.train.index",
+  "val_set": {
+    "pile": "pile.val.index",
+    "owt": "openwebtext2_new_inputs.val.index"
+  },
+
+
+  "val_batches": 100,
+  "val_every": 220020,
+  "ckpt_every": 500,
+  "keep_every": 10000,
+
+  "name": "test",
+  "wandb_project": "mesh-transformer-jax",
+  "comment": ""
+}

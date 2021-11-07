@@ -1,0 +1,5 @@
+Classify the following response into one of the following categories: Happy, Sad, Angry
+Message: What the heck dude.
+Category: Angry
+
+<|endoftext|>

@@ -6,8 +6,10 @@ import logging
 
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-from .payloads import CompletionPayload, CompletionResponse, QueueRequest, QueueResponse
-from .ops import get_gptj_model
+#from .payloads import CompletionPayload, CompletionResponse, QueueRequest, QueueResponse
+import payloads
+#from .ops import get_gptj_model
+import ops
 
 logger = logging.getLogger(__name__)
 
